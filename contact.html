@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>damdug digital strategy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="dune.svg" alt="Logo" style="height: 100px;"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="services.html">services</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>contact</h1>
+        <p style=color: #33ff33;">Feel free to shoot me an email via the form below or better yet <a href="https://calendly.com/damdug" target="_blank" style="text-decoration: underline; color: #33ff33;">Click Here</a> <a href="https://calendly.com/damdug" target="_blank"><img src="assets/calendar-fill.svg" alt="Calendar" style="vertical-align: middle;" /></a> to schedule a FREE 30-minute video or voice call.</p>
+    </div>
+    <!-- Form action updated to use Formspree -->
+    <form action="https://formspree.io/f/xnqegrgq" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="_replyto" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <!-- Hidden field to specify email subject -->
+        <input type="hidden" name="_subject" value="New submission from your website!">
+        <button type="submit" class="btn btn-default">Send</button>
+    </form>
+</div>
+
+<footer class="container-fluid">
+    <p>© damdug.com 2024</p>
+  </footer>
+</div>
+
+</body>
+</html>

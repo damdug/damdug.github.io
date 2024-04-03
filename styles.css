@@ -1,0 +1,85 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  .navbar-brand {
+    display: flex;
+    height: 50px; /* Adjust based on your logo's size */
+    width: auto; /* Keeps the aspect ratio of your logo */
+    align-items: center; /* This centers the child elements vertically */
+    justify-content: space-evenly; /* This spreads out the child elements horizontally */
+  }
+  
+  body, h1, p, footer, .navbar, .navbar-inverse, .sidenav, .well {
+    color: #33ff33; /* Green text */
+    background-color: #000; /* #33ff33 background */
+    font-family: 'Courier New', monospace;
+    border-color: #33ff33;
+  }
+  
+  .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: #33ff33;
+      background-color: #000;
+
+  } .navbar-inverse .navbar-toggle .icon-bar {
+    display: flex;
+    align-items: center;
+    color: #33ff33;
+    background-color: #33ff33;
+  }
+  /* Flexbox layout to make the content stretch to fill the space */
+  .content-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+  }
+  
+  /* Push the footer down */
+  .content {
+    flex: 1;
+  }
+  
+  footer {
+    background-color: #000;
+    color: #33ff33;
+    padding: 10px;
+    text-align: center;
+  }
+  #intro-text {
+    white-space: pre-wrap; /* This CSS rule will preserve spaces and line breaks */
+  }
+  hr, .page-header {
+    border-color: #33ff33; 
+}
+.social-links {
+  text-align: center; /* Centers the social link icons */
+  margin: 20px 0; /* Adds some space above and below the icons */
+}
+
+.social-links a {
+  display: inline-block; /* Allows you to set a width and height */
+  margin: 0 20px; /* Adds horizontal spacing between icons */
+}
+
+.social-links img {
+  width: 30px; /* Adjusts the size of the icons */
+  height: auto; /* Keeps the aspect ratio of the icons */
+}
+
+.animated-keywords {
+  font-family: 'Courier New', monospace;
+  color: #33ff33; /* Or any color you prefer */
+  /* Any additional styling */
+  font-size: 36px;
+}
+.page-header h1 {
+  margin-top: 0; /* Reduces the top margin */
+  padding-top: 0; /* Reduces the top padding */
+}
+
+
+  
+  
