@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 10;
   }
 
   .navbar-brand {
@@ -34,7 +34,7 @@ html, body {
   .content-wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
+    min-height: 60vh;
   }
   
   /* Push the footer down */
@@ -45,7 +45,7 @@ html, body {
   footer {
     background-color: #000;
     color: #33ff33;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
   }
   #intro-text {
@@ -61,11 +61,11 @@ html, body {
 
 .social-links a {
   display: inline-block; /* Allows you to set a width and height */
-  margin: 0 20px; /* Adds horizontal spacing between icons */
+  margin: 20px; /* Adds horizontal spacing between icons */
 }
 
 .social-links img {
-  width: 30px; /* Adjusts the size of the icons */
+  width: 25px; /* Adjusts the size of the icons */
   height: auto; /* Keeps the aspect ratio of the icons */
 }
 
