@@ -80,6 +80,10 @@ html, body {
   padding-top: 0; /* Reduces the top padding */
 }
 
+#keywords-list li {
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
 
   
   
