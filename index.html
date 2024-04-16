@@ -38,8 +38,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
+          <li><a href="#" onclick="promptLoginCode();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>      
       </div>
     </div>
 </nav>
@@ -60,7 +60,18 @@
   <p>© damdug.com 2024</p>
 </footer>
 </div>
-
+<script>
+  function promptLoginCode() {
+      var code = prompt("Please enter your 4-digit code:");
+      var correctCode = "1984";  // Set the correct code
+  
+      if (code == correctCode) {
+          window.location.href = 'backoffice.html'; // Redirect URL to your backend page
+      } else {
+          alert("Incorrect code. Please try again.");
+      }
+  }
+  </script>
 </body>
 </html>
 
