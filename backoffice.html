@@ -9,10 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -54,47 +52,50 @@
     <p>© damdug.com 2024</p>
   </footer>
 </div>
-<script>
-    const canvas = document.getElementById('matrixCanvas');
-    const context = canvas.getContext('2d');
-  
-    function resizeCanvas() {
-        canvas.width = document.getElementById('matrixEffect').clientWidth;
-        canvas.height = document.getElementById('matrixEffect').clientHeight;
-    }
-  
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas(); // Set initial size
-  
-    const katakana = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
-    const font_size = 10;
-    const columns = canvas.width / font_size;  // Number of columns for the rain
-    const rainDrops = [];
-  
-    for (let x = 0; x < columns; x++)
+  <script>
+  const canvas = document.getElementById('matrixCanvas');
+  const context = canvas.getContext('2d');
+
+  function resizeCanvas() {
+      canvas.width = document.getElementById('matrixEffect').clientWidth;
+      canvas.height = document.getElementById('matrixEffect').clientHeight;
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas(); // Set initial size
+
+  const katakana = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}' + 
+                   'あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん';
+  const font_size = 10;
+  const columns = canvas.width / font_size;  // Number of columns for the rain
+  const rainDrops = [];
+
+  // Initialize rainDrops positions
+  for (let x = 0; x < columns; x++)
       rainDrops[x] = 1;
-  
-    function drawMatrix() {
+
+  function drawMatrix() {
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
       
       context.fillStyle = '#0F0';  // Green text
       context.font = font_size + 'px monospace';  // Monospace to align characters
       for (let i = 0; i < rainDrops.length; i++) {
-        const text = katakana.charAt(Math.floor(Math.random() * katakana.length));
-        context.fillText(text, i * font_size, rainDrops[i] * font_size);
-        
-        if (rainDrops[i] * font_size > canvas.height && Math.random() > 0.975)
-          rainDrops[i] = 0;
-        
-        rainDrops[i]++;
+          const text = katakana.charAt(Math.floor(Math.random() * katakana.length));
+          context.fillText(text, i * font_size, rainDrops[i] * font_size);
+          
+          // Resetting the Y coordinate if it exceeds canvas height or random chance
+          if (rainDrops[i] * font_size > canvas.height && Math.random() > 0.975)
+              rainDrops[i] = 0;
+          
+          rainDrops[i]++;
       }
-    } 
-    setInterval(drawMatrix, 30);
-  </script>
- <script
- src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
- data-project-url="https://www.stack-ai.com/embed/7fc7e5cc-de33-4ce6-a00d-0dc0dba17125/1420466c-02be-4c35-8c11-79c1b9214791/661aa7f86e67731c7e21733a">
-</script>        
+  } 
+  setInterval(drawMatrix, 30);  // Draw every 30ms
+  </script> 
+  <script
+  src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
+  data-project-url="https://www.stack-ai.com/embed/7fc7e5cc-de33-4ce6-a00d-0dc0dba17125/1420466c-02be-4c35-8c11-79c1b9214791/661aa7f86e67731c7e21733a">
+  </script>     
 </body>
 </html>
