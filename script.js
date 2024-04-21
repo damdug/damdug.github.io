@@ -75,4 +75,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start the typing effect
   typeKeywords();
 });
-
