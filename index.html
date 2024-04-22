@@ -1,77 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>damdug digital strategy</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>damdug digital strategy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="#">
-          <img src="dune.svg" alt="Dune Logo" height="100px" />
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="https://www.buymeacoffee.com/damdug">
-              <img src="Assets/cup-hot-fill.svg" alt="Buy Me a Coffee icon" style="height: 20px; vertical-align: middle;"/>
-              (Buy me a coffee!)
-            </a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#" onclick="promptLoginCode();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>      
-      </div>
-    </div>
-</nav>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="dune.svg" alt="Dune Logo" height="100px" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="https://www.buymeacoffee.com/damdug">
+                            <img src="Assets/cup-hot-fill.svg" alt="Buy Me a Coffee icon" style="height: 20px; vertical-align: middle;"/>
+                            (Buy me a coffee!)
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" onclick="promptLoginCode();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul> 
+            </div>
+        </div>
+    </nav>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8 text-left">
-      <!-- Main content -->
-      <h1 id="welcome-heading"></h1>
+    <div class="content-wrapper">
+        <div id="keyword-animation" class="animated-keywords"> 
+          <h1 id="welcome-heading"></h1>
       <p id="intro-text"></p>
-      <hr>
-      <h3>#comment</h3>
-      <p>"In a future where technology becomes indistinguishable from magic, the boundaries of reality are forever shattered."</p>
+          <hr>
+          </div>
+            <p>"In a future where technology becomes indistinguishable from magic, the boundaries of reality are forever shattered."</p>
+        </div>   
     </div>
-  </div>
-</div>
-<footer class="container-fluid">
-  <p>© damdug.com 2024</p>
-</footer>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-<script>
-  function promptLoginCode() {
-      var code = prompt("Please enter your code:");
-      var correctCode = "1984";  // Set the correct code
-  
-      if (code == correctCode) {
-          window.location.href = 'backoffice.html'; // Redirect URL to your backend page
-      } else {
-          alert("Incorrect code. Please try again.");
+    <footer class="container-fluid">
+        <p>© damdug.com 2024</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function promptLoginCode() {
+          var code = prompt("Please enter your code:");
+          var correctCode = "1984";  // Set the correct code
+      
+          if (code == correctCode) {
+              window.location.href = 'backoffice.html'; // Redirect URL to your backend page
+          } else {
+              alert("Incorrect code. Please try again.");
+          }
       }
-  }
-  </script>
+    </script>
 </body>
 </html>
+
 
