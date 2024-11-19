@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const keywords = ["Innovation", "Web Development", "AI & Machine Learning", "Business & Digital Strategy", "SOP Optimization", "Customer Relationship Management (CRM)", "Sales & Marketing", "E-commerce Strategies", "Content Marketing and SEO", "User Experience (UX) Design", "Digital Transformation", "Project Management(PMO)", "Full Stack Development", "Operations", "Good Ideas"];
+  const keywords = [ "Digital Engagement Strategies","Innovation", "Web Development", "AI Enhanced Compliance & Automation", "Brand Identity", "SOP Optimization", "Customer Relationship Management (CRM)", "Sales & Marketing", "Content Marketing and SEO", "User Experience (UX) Design", "Project/Product Management(PMO)", "Full Stack Development", "Operations", "Good Ideas"];
   let currentKeyword = 0;
   let letterIndex = 0;
   const typingDelay = 100;
