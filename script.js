@@ -7,16 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  const welcomeText = "def future_proof(business_strategy, technology_adoption, process_optimization):";
-  const introText = `Enhance a business model to make it resilient against future challenges.
+  const welcomeText = "def create_and_scale(vision, tools, execution):";
+  const introText = `Build, Scale, and Lead with Confidence—From Startup to Sustainable Growth.
 
-  Parameters:
-  - business_strategy (dict): A dictionary containing elements of the business strategy.
-  - technology_adoption (list): A list of technologies to adopt for future-proofing.
-  - process_optimization (list): Processes identified for optimization.
+ Parameters:
+    - vision (dict): Define your goals, refine your strategy, and establish a clear roadmap.
+    - tools (list): Select and integrate the right digital solutions to automate, optimize, and scale efficiently.
+    - execution (list): Implement structured methodologies to drive growth, streamline operations, and sustain success.
 
-  Returns:
-  - dict: A dictionary representing the future-proofed business model.
+    Returns:
+    - dict: A fully realized business model designed for clarity, efficiency, and long-term scalability—whether launching a startup or leading an established business.
+
   [Establish Connection]`;
   
   typeWriter(welcomeText, 'welcome-heading', 150); // Typing effect for the heading
@@ -24,7 +25,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const keywords = [ "Digital Engagement Strategies","Innovation", "Web Development", "AI Enhanced Compliance & Automation", "Brand Identity", "SOP Optimization", "Customer Relationship Management (CRM)", "Sales & Marketing", "Content Marketing and SEO", "User Experience (UX) Design", "Project/Product Management(PMO)", "Full Stack Development", "Operations", "Good Ideas"];
+  const keywords = [
+"Business Strategy & Execution",
+"Business Coaching & Leadership",
+"Digital Engagement & Marketing",
+"AI-Powered Automation",
+"Customer Growth & Sales Strategy",
+"Scalable Business Operations",
+"CRM & Sales Optimization",
+"Content Marketing & SEO",
+"User Experience & Brand Identity",
+"Fractional Executive Services",
+"Project & Product Management",
+"Full-Stack Business Development",
+"Process Improvement & SOPs",
+"Entrepreneurial Growth Roadmaps",
+"Building Systems for Scale"
+];
   let currentKeyword = 0;
   let letterIndex = 0;
   const typingDelay = 100;
