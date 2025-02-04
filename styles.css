@@ -101,7 +101,6 @@ canvas#matrixCanvas {
   left: 0;
 }
 
-
-
-  
-  
+.large-text {
+  font-size: 24px;
+}

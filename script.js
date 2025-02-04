@@ -92,6 +92,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Start the typing effect
   typeKeywords();
 });
-
-const whatsappLink = 'https://wa.me/19125085508?text=Hello%20Douglas,%20I%20would%20like%20to%20connect%20with%20you.';
-document.write('<a href="' + whatsappLink + '" target="_blank">[Establish Connection]</a>');
