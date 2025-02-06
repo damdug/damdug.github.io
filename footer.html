@@ -1,3 +1,6 @@
 <footer class="container-fluid">
-    <p>© damdug.com 2024</p>
+    <p>© damdug.com <span id="current-year"></span></p>
 </footer>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
