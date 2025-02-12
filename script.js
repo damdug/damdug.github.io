@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const keywords = [
-"Business Strategy & Execution",
+"Business Strategy & Planning",
 "Business Coaching & Leadership",
 "Digital Engagement & Marketing",
 "AI-Powered Automation",
@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
 "Full-Stack Business Development",
 "Process Improvement & SOPs",
 "Entrepreneurial Growth Roadmaps",
-"Building Systems for Scale"
+"Building Systems for Scale",
+"Good Ideas"
 ];
   let currentKeyword = 0;
   let letterIndex = 0;
