@@ -26,16 +26,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const keywords = [
-"Business Strategy & Planning",
+"Business Strategy & Organization",
 "Business Coaching & Leadership",
+"Integrated Online Presence & Strategy",
+"Fractional Executive Services",
+"Customer Growth & Sales Strategy"
 "Digital Engagement & Marketing",
-"AI-Powered Automation",
-"Customer Growth & Sales Strategy",
+"AI-Powered Automation",,
 "Scalable Business Operations",
 "CRM & Sales Optimization",
 "Content Marketing & SEO",
 "User Experience & Brand Identity",
-"Fractional Executive Services",
 "Project & Product Management",
 "Full-Stack Business Development",
 "Process Improvement & SOPs",
