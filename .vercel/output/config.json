@@ -1,0 +1,63 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/about/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/subscribe/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/api/verify/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/confirm/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/contact/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/hdk/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/notes/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/one-rule/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/work-with-me/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
+			"dest": "_render"
+		}
+	]
+}

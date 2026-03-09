@@ -1,22 +1,54 @@
-## Welcome
+# damdug.com
 
-Hello! I’m Douglas, and I manufacture and distribute good ideas. My work intersects technology, community building, and philosophical inquiry. I’m driven by curiosity about understanding systems—whether they are simple frameworks or cosmic orders—and by a passion for creating efficiencies that enhance both ourselves and our environment.
+Personal platform for Douglas M. Galloway — systems thinker, builder, coach.
 
-## About Me
+## Tech Stack
 
-I enjoy creating experiences where technology transcends its conventional boundaries. My interests focus on pushing the limits of what’s possible, transforming imaginative concepts into tangible results, and designing solutions that align with meaningful goals.
+- Astro (SSR mode with Vercel adapter)
+- Content Collections for notes and HDK content
+- Vercel Edge Functions for authentication
+- Buttondown API for newsletter
+- IBM Plex Mono typography
+- Plain CSS (no frameworks)
 
-## What You'll Find Here
+## Setup
 
-This site serves as both a portfolio and a personal blog, where I share:
+1. Install dependencies:
+```bash
+npm install
+```
 
-Insights into digital innovation and strategy.
-Resources for working with open-source tools and technology.
-Projects showcasing the creative processes and ideas that drive my work.
-Explore, engage, and get inspired by the journey!
+2. Create `.env` from `.env.example` and add your API keys:
+```bash
+BUTTONDOWN_API_KEY=your_buttondown_api_key
+AUTH_SECRET=your_random_secret_string_min_32_chars
+SITE_URL=https://damdug.com
+```
 
-## Connect with Me
+3. Run development server:
+```bash
+npm run dev
+```
 
-If you would like to connect, feel free to reach out through the [contact page](https://damdug.github.io/contact) or support my work [here](https://www.buymeacoffee.com/damdug).
+## Deployment
 
-Thank you for visiting, and let’s build something together!
+The site is configured for Vercel deployment. Push to main branch to deploy automatically.
+
+## Structure
+
+- `/src/pages` - All routes and API endpoints
+- `/src/content` - Content collections (notes, hdk)
+- `/src/components` - Reusable Astro components
+- `/src/layouts` - Layout templates
+- `/src/styles` - Global CSS
+- `/legacy` - Archived original site files
+
+## Authentication
+
+The `/resources` route is protected by middleware. Users must:
+1. Submit email via SignupForm
+2. Receive magic link via email
+3. Click link to set auth cookie (90 day expiry)
+4. Access granted to /resources
+
+Magic link flow: SignupForm → /api/subscribe → email → /confirm → /api/verify → /resources

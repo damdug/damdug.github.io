@@ -1,0 +1,25 @@
+---
+const navItems = [
+  { href: '/notes', label: 'Notes' },
+  { href: '/hdk', label: 'HDK' },
+  { href: '/resources', label: 'Resources' },
+  { href: '/work-with-me', label: 'Work With Me' },
+  { href: '/about', label: 'About' },
+];
+const current = Astro.url.pathname;
+---
+<nav>
+  <ul style="list-style: none; display: flex; gap: var(--space-lg); flex-wrap: wrap; align-items: center;">
+    {navItems.map(item => {
+      const isActive = current.startsWith(item.href);
+      const color = isActive ? 'var(--accent)' : 'var(--text-tertiary)';
+      return (
+        <li>
+          <a href={item.href} style={`font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: ${color}; transition: color 0.15s;`}>
+            {item.label}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>

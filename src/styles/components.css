@@ -1,0 +1,70 @@
+.container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+.container--wide { max-width: var(--max-width-wide); }
+.section { padding: var(--space-xl) 0; }
+
+/* Cards */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: var(--space-lg);
+  transition: border-color 0.15s;
+}
+.card:hover { border-color: var(--accent); }
+
+/* Notes list */
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  gap: var(--space-md);
+}
+.note-item:hover .note-title { color: var(--accent); }
+.note-date { font-size: 0.8rem; color: var(--text-tertiary); white-space: nowrap; flex-shrink: 0; }
+
+/* Tags */
+.tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+}
+.tag--accent { border-color: var(--accent); color: var(--accent); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn--accent { border-color: var(--accent); color: var(--accent); }
+.btn--accent:hover { background: var(--accent); color: var(--bg-primary); }
+
+/* Forms */
+.form-row { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+.form-input {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem;
+  flex: 1;
+  min-width: 200px;
+  outline: none;
+}
+.form-input:focus { border-color: var(--accent); }
+.form-input::placeholder { color: var(--text-tertiary); }

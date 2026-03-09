@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SignupForm from '../components/SignupForm.astro';
+---
+<BaseLayout title="The One Rule">
+  <article class="container section">
+    <h1 style="margin-bottom: var(--space-xl);">The One Rule</h1>
+    
+    <div style="max-width: 65ch; display: flex; flex-direction: column; gap: var(--space-xl);">
+      <p>I've been applying the same principle to everything I do for years without naming it.</p>
+      
+      <p>Traffic law taught it to me. All of it reduces to one rule: don't impede other drivers. Not a destination. Not an outcome. One obligation at every step that produces a system capable of moving through impossible complexity without breaking down.</p>
+      
+      <p>I use it for personal planning. For organizational decision logic. For AI implementation. For SOPs. For how I structure my days. The scale changes. The principle doesn't.</p>
+      
+      <p>This is that principle, documented in three parts.</p>
+
+      <hr />
+
+      <section>
+        <ol style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-lg);">
+          <li>
+            <a href="/notes/the-one-rule" style="display: block; padding: var(--space-lg); border: 1px solid var(--border); transition: border-color 0.15s;">
+              <div style="display: flex; gap: var(--space-md); align-items: start;">
+                <span style="font-size: 0.75rem; color: var(--text-tertiary); font-weight: 500; min-width: 2rem;">01</span>
+                <div>
+                  <h3 style="font-size: 1rem; margin-bottom: var(--space-xs);">The One Rule</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">The principle and the problem it solves.</p>
+                  <p style="font-size: 0.8125rem; color: var(--text-tertiary); margin-top: var(--space-xs);">Read →</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/notes/the-non-impedance-principle" style="display: block; padding: var(--space-lg); border: 1px solid var(--border); transition: border-color 0.15s;">
+              <div style="display: flex; gap: var(--space-md); align-items: start;">
+                <span style="font-size: 0.75rem; color: var(--text-tertiary); font-weight: 500; min-width: 2rem;">02</span>
+                <div>
+                  <h3 style="font-size: 1rem; margin-bottom: var(--space-xs);">The Non-Impedance Principle</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">How to apply it to systems and workflows.</p>
+                  <p style="font-size: 0.8125rem; color: var(--text-tertiary); margin-top: var(--space-xs);">Read →</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/notes/the-next-step-doctrine" style="display: block; padding: var(--space-lg); border: 1px solid var(--border); transition: border-color 0.15s;">
+              <div style="display: flex; gap: var(--space-md); align-items: start;">
+                <span style="font-size: 0.75rem; color: var(--text-tertiary); font-weight: 500; min-width: 2rem;">03</span>
+                <div>
+                  <h3 style="font-size: 1rem; margin-bottom: var(--space-xs);">The Next Step Doctrine</h3>
+                  <p style="font-size: 0.875rem; color: var(--text-secondary);">How to apply it to yourself.</p>
+                  <p style="font-size: 0.8125rem; color: var(--text-tertiary); margin-top: var(--space-xs);">Read →</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section style="background: var(--bg-surface); border: 1px solid var(--border); padding: var(--space-lg);">
+        <p style="margin-bottom: var(--space-lg); font-size: 0.9375rem;">If this changes how you think about something, you can follow it as it develops.</p>
+        <p style="margin-bottom: var(--space-lg); font-size: 0.9375rem;">One signup also unlocks the HDK — a personal operating system framework built on the same foundation.</p>
+        <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
+        <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--text-tertiary);">If you want to apply this directly — to your own system or your organization's — <a href="/work-with-me" style="color: var(--text-tertiary); text-decoration: underline;">Work With Me</a> is where that starts.</p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  a[href^="/notes/"]:hover {
+    border-color: var(--accent);
+  }
+</style>

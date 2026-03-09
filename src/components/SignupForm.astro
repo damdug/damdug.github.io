@@ -1,0 +1,56 @@
+---
+interface Props {
+  label?: string;
+  placeholder?: string;
+  buttonText?: string;
+  redirect?: string;
+}
+const {
+  label = 'Get access to all resources — free.',
+  placeholder = 'your@email.com',
+  buttonText = 'Get Access',
+} = Astro.props;
+---
+<div class="signup-form">
+  {label && <p class="label" style="margin-bottom: var(--space-sm);">{label}</p>}
+  <form class="form-row" id="signup-form">
+    <input
+      type="email"
+      name="email"
+      placeholder={placeholder}
+      required
+      class="form-input"
+    />
+    <button type="submit" class="btn btn--accent">{buttonText}</button>
+  </form>
+  <p id="signup-message" style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: var(--space-sm); display: none;"></p>
+</div>
+
+<script>
+  const form = document.getElementById('signup-form') as HTMLFormElement;
+  const message = document.getElementById('signup-message') as HTMLElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch('/api/subscribe', { method: 'POST', body: formData });
+      const data = await res.json();
+
+      message.style.display = 'block';
+      if (data.success) {
+        message.style.color = 'var(--accent)';
+        message.textContent = '✓ Check your email for your access link.';
+        form.reset();
+      } else {
+        message.style.color = '#d47d7d';
+        message.textContent = data.error || 'Something went wrong. Please try again.';
+      }
+    } catch {
+      message.style.display = 'block';
+      message.style.color = '#d47d7d';
+      message.textContent = 'Something went wrong. Please try again.';
+    }
+  });
+</script>

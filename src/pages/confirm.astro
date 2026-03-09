@@ -1,0 +1,14 @@
+---
+// Client-side redirect to /api/verify with all params
+const token = Astro.url.searchParams.get('token');
+const email = Astro.url.searchParams.get('email');
+const expiry = Astro.url.searchParams.get('expiry');
+
+if (token && email && expiry) {
+  const encodedEmail = encodeURIComponent(email);
+  return Astro.redirect(
+    `/api/verify?token=${token}&email=${encodedEmail}&expiry=${expiry}`
+  );
+}
+---
+<meta http-equiv="refresh" content="0;url=/hdk?error=invalid" />
