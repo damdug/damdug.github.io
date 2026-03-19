@@ -17,8 +17,12 @@ export const OPTIONS: APIRoute = async () => {
 };
 
 export const POST: APIRoute = async ({ request }) => {
+  console.log('[subscribe] POST request received');
+  console.log('[subscribe] Headers:', Object.fromEntries(request.headers.entries()));
+
   const data = await request.formData();
   const email = data.get('email')?.toString();
+  console.log('[subscribe] Email:', email);
 
   if (!email || !email.includes('@')) {
     return new Response(JSON.stringify({ error: 'Valid email required' }), {
