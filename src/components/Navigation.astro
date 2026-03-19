@@ -1,6 +1,6 @@
 ---
 const navItems = [
-  { href: '/one-rule', label: 'The One Rule' },
+  { href: '/one-rule', label: 'One Rule' },
   { href: '/hdk', label: 'HDK' },
   { href: '/library', label: 'Library' },
   { href: '/work-with-me', label: 'Work With Me' },
@@ -9,7 +9,12 @@ const navItems = [
 const current = Astro.url.pathname;
 ---
 <nav>
-  <ul style="list-style: none; display: flex; gap: var(--space-lg); flex-wrap: wrap; align-items: center;">
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+    <span class="nav-toggle-line"></span>
+  </button>
+  <ul id="nav-menu" class="nav-menu">
     {navItems.map(item => {
       const isActive = current.startsWith(item.href);
       const color = isActive ? 'var(--accent)' : 'var(--text-tertiary)';
@@ -23,3 +28,95 @@ const current = Astro.url.pathname;
     })}
   </ul>
 </nav>
+
+<style>
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .nav-toggle-line {
+    width: 20px;
+    height: 2px;
+    background: var(--text-tertiary);
+    transition: all 0.2s;
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-top: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: var(--space-lg);
+      gap: var(--space-md);
+      transform: translateX(100%);
+      transition: transform 0.2s;
+      z-index: 100;
+    }
+
+    .nav-menu.open {
+      transform: translateX(0);
+    }
+
+    .nav-toggle.open .nav-toggle-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.open .nav-toggle-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open .nav-toggle-line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  toggle?.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    menu?.classList.toggle('open');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (menu?.classList.contains('open') && !toggle?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+      toggle?.classList.remove('open');
+      menu?.classList.remove('open');
+    }
+  });
+
+  // Close menu on navigation
+  menu?.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).tagName === 'A') {
+      toggle?.classList.remove('open');
+      menu?.classList.remove('open');
+    }
+  });
+</script>

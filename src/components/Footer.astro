@@ -7,8 +7,19 @@ const year = new Date().getFullYear();
         style="max-width: var(--max-width-wide); margin: 0 auto; padding: 0 var(--space-lg); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-md);"
     >
         <span style="font-size: 0.75rem; color: var(--text-tertiary);">© {year} Douglas M. Galloway</span>
-        <span style="font-size: 0.75rem; color: var(--text-tertiary);">
-            <a href="https://www.buymeacoffee.com/damdug" target="_blank" rel="noopener" style="color: var(--text-tertiary);">Buy me a coffee ☕</a>
+        <span style="font-size: 0.75rem;">
+            <a href="https://buymeacoffee.com/damdug" target="_blank" rel="noopener" class="coffee-link">Buy me a coffee →</a>
         </span>
     </div>
 </footer>
+
+<style>
+  .coffee-link {
+    color: var(--accent);
+    transition: opacity 0.15s;
+  }
+
+  .coffee-link:hover {
+    opacity: 0.8;
+  }
+</style>
