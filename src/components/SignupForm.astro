@@ -35,7 +35,13 @@ const {
     const formData = new FormData(form);
 
     try {
-      const res = await fetch('/api/subscribe', { method: 'POST', body: formData });
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+      });
       const data = await res.json();
 
       message.style.display = 'block';
