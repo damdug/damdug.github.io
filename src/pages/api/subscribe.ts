@@ -1,6 +1,21 @@
 import type { APIRoute } from 'astro';
 import { createHmac } from 'crypto';
 
+// CORS headers for cross-origin requests
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+// Handle CORS preflight requests
+export const OPTIONS: APIRoute = async () => {
+  return new Response(null, {
+    status: 204,
+    headers: CORS_HEADERS,
+  });
+};
+
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
   const email = data.get('email')?.toString();
@@ -8,7 +23,10 @@ export const POST: APIRoute = async ({ request }) => {
   if (!email || !email.includes('@')) {
     return new Response(JSON.stringify({ error: 'Valid email required' }), {
       status: 400,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        ...CORS_HEADERS,
+      },
     });
   }
 
@@ -47,6 +65,9 @@ export const POST: APIRoute = async ({ request }) => {
     message: 'Check your email for access link',
   }), {
     status: 200,
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      ...CORS_HEADERS,
+    },
   });
 };
