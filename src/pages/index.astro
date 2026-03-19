@@ -13,7 +13,7 @@ import SignupForm from '../components/SignupForm.astro';
             </p>
             <p style="margin-top: var(--space-md); color: var(--text-tertiary);">Process. Design. Execution. One approach.</p>
 
-            <div style="margin-top: var(--space-xl); max-width: 600px;">
+            <div id="signup" style="margin-top: var(--space-xl); max-width: 600px;">
                 <p style="margin-bottom: var(--space-md); font-size: 0.875rem;">Get access to everything — free.</p>
                 <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
             </div>
@@ -22,7 +22,7 @@ import SignupForm from '../components/SignupForm.astro';
 
     <section
         class="section"
-        style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: var(--space-xl);"
+        style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: var(--space-xl); margin-bottom: 0; padding-bottom: 0;"
     >
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
@@ -40,6 +40,11 @@ import SignupForm from '../components/SignupForm.astro';
                     <h3 style="margin-bottom: var(--space-sm);">Library</h3>
                     <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">One signup. Everything here, plus what's coming.</p>
                     <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Get access →</p>
+                </a>
+                <a href="/#signup" class="card" style="display: block;">
+                    <h3 style="margin-bottom: var(--space-sm);">The Approach</h3>
+                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">I manufacture and distribute good ideas. Systems thinking applied to whatever the problem actually is.</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Get on the list →</p>
                 </a>
             </div>
         </div>
