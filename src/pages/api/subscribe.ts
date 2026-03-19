@@ -66,7 +66,7 @@ This link expires in 24 hours.
 — Douglas M. Galloway
 damdug.com`;
 
-    await fetch('https://api.buttondown.email/v1/emails', {
+    const emailResponse = await fetch('https://api.buttondown.email/v1/emails', {
       method: 'POST',
       headers: {
         'Authorization': `Token ${import.meta.env.BUTTONDOWN_API_KEY}`,
@@ -78,6 +78,14 @@ damdug.com`;
         body: emailBody,
       }),
     });
+
+    const emailResult = await emailResponse.text();
+    console.log('[subscribe] Buttondown email response status:', emailResponse.status);
+    console.log('[subscribe] Buttondown email response:', emailResult);
+
+    if (!emailResponse.ok) {
+      throw new Error(`Buttondown API error: ${emailResponse.status} - ${emailResult}`);
+    }
 
     console.log('[subscribe] Magic link email sent to:', email);
   } catch (e) {
