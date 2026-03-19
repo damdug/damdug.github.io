@@ -32,8 +32,10 @@ export const GET: APIRoute = async ({ request, redirect }) => {
 
   const maxAge = 60 * 60 * 24 * 90;
 
-  return redirect('/resources', 302, {
+  return new Response(null, {
+    status: 302,
     headers: {
+      'Location': '/library',
       'Set-Cookie': `damdug_access=${cookieValue}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`,
     },
   });

@@ -40,17 +40,17 @@ const {
 
       message.style.display = 'block';
       if (data.success) {
-        message.style.color = 'var(--accent)';
-        message.textContent = '✓ Check your email for your access link.';
+        message.style.color = 'var(--text-primary)';
+        message.textContent = "You're in. Check your email.";
         form.reset();
       } else {
-        message.style.color = '#d47d7d';
-        message.textContent = data.error || 'Something went wrong. Please try again.';
+        message.style.color = 'var(--accent)';
+        message.textContent = 'Something went wrong. Try again.';
       }
     } catch {
       message.style.display = 'block';
-      message.style.color = '#d47d7d';
-      message.textContent = 'Something went wrong. Please try again.';
+      message.style.color = 'var(--accent)';
+      message.textContent = 'Something went wrong. Try again.';
     }
   });
 </script>

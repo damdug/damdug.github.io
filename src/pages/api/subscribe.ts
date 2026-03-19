@@ -20,7 +20,7 @@ export const POST: APIRoute = async ({ request }) => {
         'Authorization': `Token ${import.meta.env.BUTTONDOWN_API_KEY}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, tags: ['resources-access'] }),
+      body: JSON.stringify({ email, tags: ['damdug-signup'] }),
     });
   } catch (e) {
     // Continue even if Buttondown fails — don't block the user
