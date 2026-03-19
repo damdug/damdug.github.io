@@ -4,6 +4,9 @@ import SignupForm from '../components/SignupForm.astro';
 ---
 
 <BaseLayout title="Home">
+<style>
+  footer { margin-top: 0 !important; }
+</style>
     <section class="section">
         <div class="container">
             <p class="label" style="margin-bottom: var(--space-md);">DOUGLAS M. GALLOWAY</p>
@@ -12,37 +15,42 @@ import SignupForm from '../components/SignupForm.astro';
                 I build systems — for organizations, for teams, for myself. The frameworks here are principles developed from practice, made available because they're useful beyond my own context.
             </p>
             <p style="margin-top: var(--space-md); color: var(--text-tertiary);">Process. Design. Execution. One approach.</p>
+
+            <div id="signup" style="margin-top: var(--space-xl); max-width: 600px;">
+                <p style="margin-bottom: var(--space-md); font-size: 0.875rem;">Get access to everything — free.</p>
+                <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
+            </div>
         </div>
     </section>
 
     <section
         class="section"
-        style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: var(--space-2xl) 0;"
+        style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: var(--space-xl); margin-bottom: 0; padding-bottom: 0;"
     >
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
                 <a href="/one-rule" class="card" style="display: block;">
                     <h3 style="margin-bottom: var(--space-sm);">The One Rule</h3>
-                    <p style="font-size: 0.875rem;">A governing principle for decisions, systems, and practice. The foundation everything else builds on.</p>
+                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">A governing principle for decisions, systems, and practice. The foundation everything else builds on.</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Read →</p>
                 </a>
                 <a href="/hdk" class="card" style="display: block;">
                     <h3 style="margin-bottom: var(--space-sm);">HDK</h3>
-                    <p style="font-size: 0.875rem;">A free framework for designing your personal operating system. Built from practice. Yours to use.</p>
+                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">A free framework for designing your personal operating system. Built from practice. Yours to use.</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Explore →</p>
                 </a>
                 <a href="/library" class="card" style="display: block;">
                     <h3 style="margin-bottom: var(--space-sm);">Library</h3>
-                    <p style="font-size: 0.875rem;">A growing collection of frameworks and tools developed from practice. Free to access. More added as the work develops.</p>
+                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">One signup. Everything here, plus what's coming.</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Get access →</p>
+                </a>
+                <a href="/#signup" class="card" style="display: block;">
+                    <h3 style="margin-bottom: var(--space-sm);">The Approach</h3>
+                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">I manufacture and distribute good ideas. Systems thinking applied to whatever the problem actually is.</p>
+                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Get on the list →</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container" style="max-width: 600px;">
-            <p style="margin-bottom: var(--space-lg); font-size: 0.9375rem;">
-                Free access to everything I've built. The HDK. The One Rule framework. One signup.
-            </p>
-            <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
-        </div>
-    </section>
 </BaseLayout>

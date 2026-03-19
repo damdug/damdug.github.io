@@ -15,12 +15,9 @@ if (signup === 'true') errorMessage = '// Sign up to access the full resources l
     <h1 style="margin-bottom: var(--space-lg);">Human Development Kit</h1>
     
     <div style="max-width: 65ch; display: flex; flex-direction: column; gap: var(--space-xl);">
-      <section>
-        <h2 style="margin-bottom: var(--space-md);">What It Is</h2>
-        <p>A structured approach to building your personal operating system. Process design applied to life — not as metaphor, but as method. Built from years of practice across work, health, learning, decision-making, and creative output. It's a field manual for people who understand that sustainable outcomes don't come from motivation or shortcuts — they come from well-designed systems.</p>
-      </section>
+      <p>You're already running a system. Sleep schedules, decision habits, how you recover, what you avoid — all of it is operating whether you designed it or not. The HDK is the manual that should have come with you. Not self-help — an operating manual. Nine modules covering everything from how your body runs to why you do what you do, each one a layer you audit, configure, and own.</p>
 
-      <section>
+      <section style="margin-top: var(--space-xl);">
         <h2 style="margin-bottom: var(--space-md);">What's Inside</h2>
         <p>Nine chapters, each a layer of the framework:</p>
         <ul style="list-style: none; padding: 0; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm);">
@@ -52,13 +49,14 @@ if (signup === 'true') errorMessage = '// Sign up to access the full resources l
             <span style="position: absolute; left: 0; color: var(--text-tertiary);">9.</span> Integration — running the full stack
           </li>
         </ul>
-      </section>
 
-      <section>
-        <h2 style="margin-bottom: var(--space-md);">The Field Kit</h2>
-        <p>The HDK Field Kit is the working companion to this framework. Seven worksheets for mapping your stack, tracking your changelog, clarifying your values, and building your minimum viable routine.</p>
-        <p style="margin-top: var(--space-md);">Pay what it's worth. Suggested $5. Minimum $1.</p>
-        <p style="margin-top: var(--space-md);"><a href="https://damdugster.gumroad.com/l/HDKFieldKit" class="btn btn--accent" style="display: inline-block;">Get the Field Kit</a></p>
+        <div style="position: relative; padding: var(--space-lg); border: 1px solid var(--border); margin-top: var(--space-lg);">
+          <div class="chapter-preview">
+            <p style="margin-bottom: var(--space-md);">The Stack Audit is a structured diagnostic — a current state assessment of your LifeStack across all active modules.</p>
+            <p>It has one job: accuracy. Not optimism. Not aspiration. The version that is actually operating right now, today, under current conditions.</p>
+          </div>
+          <div class="preview-fade"></div>
+        </div>
       </section>
 
       <section style="background: var(--bg-surface); border: 1px solid var(--border); padding: var(--space-lg); margin-top: var(--space-lg);">
@@ -66,6 +64,34 @@ if (signup === 'true') errorMessage = '// Sign up to access the full resources l
         <p style="font-size: 0.875rem; margin-bottom: var(--space-md);">Free to download. One signup unlocks the HDK, The One Rule Framework, and everything in the Library.</p>
         <SignupForm label="" buttonText="Get Access" placeholder="your@email.com" />
       </section>
+
+      <hr style="border-color: var(--border); margin-top: var(--space-xl);" />
+
+      <section>
+        <h2 style="margin-bottom: var(--space-md);">The companion workbook</h2>
+        <p style="margin-bottom: var(--space-md);">The HDK is complete on its own. The Field Kit is for those who want a structured place to do the work.</p>
+        <p>The HDK Field Kit is the working companion to this framework. Seven worksheets for mapping your stack, tracking your changelog, clarifying your values, and building your minimum viable routine.</p>
+        <p style="margin-top: var(--space-md);">Pay what it's worth. Suggested $5. Minimum $1.</p>
+        <p style="margin-top: var(--space-md);"><a href="https://damdugster.gumroad.com/l/HDKFieldKit" class="btn btn--accent" style="display: inline-block;">Get the Field Kit</a></p>
+      </section>
     </div>
   </article>
 </BaseLayout>
+
+<style>
+  .chapter-preview {
+    position: relative;
+    max-height: 8rem;
+    overflow: hidden;
+  }
+
+  .preview-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background: linear-gradient(to bottom, transparent, var(--bg-primary));
+    pointer-events: none;
+  }
+</style>

@@ -21,6 +21,14 @@ const formatted = date.toISOString().split('T')[0];
       <p style="margin-top: var(--space-md); font-size: 0.8rem; color: var(--text-tertiary);">{formatted}</p>
     </header>
     <div class="prose"><slot /></div>
+
+    <hr style="border-color: var(--border); margin-top: var(--space-xl); margin-bottom: var(--space-lg);" />
+
+    <div style="padding: var(--space-md) 0;">
+      <p style="font-size: 0.875rem; color: var(--text-tertiary);">
+        If this was useful — <a href="https://buymeacoffee.com/damdug" target="_blank" rel="noopener" style="color: var(--accent);">Buy me a coffee →</a>
+      </p>
+    </div>
   </article>
 </BaseLayout>
 
