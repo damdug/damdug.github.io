@@ -20,8 +20,7 @@ export const POST: APIRoute = async ({ request }) => {
   console.log('[subscribe] POST request received');
   console.log('[subscribe] Headers:', Object.fromEntries(request.headers.entries()));
 
-  const data = await request.formData();
-  const email = data.get('email')?.toString();
+  const { email } = await request.json();
   console.log('[subscribe] Email:', email);
 
   if (!email || !email.includes('@')) {

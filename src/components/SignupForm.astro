@@ -35,12 +35,15 @@ const {
     const formData = new FormData(form);
 
     try {
+      // Convert FormData to JSON to avoid CSRF protection
+      const email = formData.get('email');
       const res = await fetch('/api/subscribe', {
         method: 'POST',
-        body: formData,
         headers: {
+          'Content-Type': 'application/json',
           'X-Requested-With': 'XMLHttpRequest',
         },
+        body: JSON.stringify({ email }),
       });
       const data = await res.json();
 
