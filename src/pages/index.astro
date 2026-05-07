@@ -3,21 +3,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SignupForm from '../components/SignupForm.astro';
 ---
 
-<BaseLayout title="Home">
+<BaseLayout title="Home" description="Douglas M. Galloway — Systems thinker and builder. Frameworks developed from practice, made available because they're useful beyond my own context.">
 <style>
   footer { margin-top: 0 !important; }
 </style>
     <section class="section">
         <div class="container">
             <p class="label" style="margin-bottom: var(--space-md);">DOUGLAS M. GALLOWAY</p>
+            <p style="margin-bottom: var(--space-md); color: var(--text-tertiary); font-size: 0.875rem;">For people building something real who keep running into the same ceiling.</p>
             <h1 class="cursor">Systems over shortcuts.</h1>
             <p style="margin-top: var(--space-lg); max-width: 60ch;">
-                I build systems — for organizations, for teams, for myself. The frameworks here are principles developed from practice, made available because they're useful beyond my own context.
+                I build systems — for organizations, for teams, for myself. The lens doesn't change with the scale.
             </p>
             <p style="margin-top: var(--space-md); color: var(--text-tertiary);">Process. Design. Execution. One approach.</p>
 
             <div id="signup" style="margin-top: var(--space-xl); max-width: 600px;">
-                <p style="margin-bottom: var(--space-md); font-size: 0.875rem;">The frameworks I work from. Available because they're useful beyond my own context. One signup.</p>
+                <p style="margin-bottom: var(--space-md); font-size: 0.875rem;">The frameworks behind the work. One signup unlocks everything.</p>
                 <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
             </div>
         </div>
