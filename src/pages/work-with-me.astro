@@ -17,7 +17,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>Tell me what you're working on.</p>
 
       <section style="margin-top: var(--space-lg);">
-        <form action="#" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg); max-width: 600px;">
+        <form action="https://formspree.io/f/xnqegrgq" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg); max-width: 600px;">
+          <input type="hidden" name="_subject" value="New message — damdug.com" />
+          <input type="hidden" name="_next" value="https://www.damdug.com/confirm" />
           <div>
             <label for="name" class="label" style="display: block; margin-bottom: var(--space-xs);">Name</label>
             <input type="text" id="name" name="name" required class="form-input" style="width: 100%;" />
