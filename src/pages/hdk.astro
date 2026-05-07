@@ -10,7 +10,7 @@ if (error === 'expired') errorMessage = '// That link has expired. Request a new
 if (error === 'invalid') errorMessage = '// That link isn\'t valid. Request a new one below.';
 if (signup === 'true') errorMessage = '// Sign up to access the full resources library.';
 ---
-<BaseLayout title="HDK">
+<BaseLayout title="HDK" description="The Human Development Kit — a framework for designing your personal operating system. Nine chapters. Built from practice.">
   <article class="container section">
     <h1 style="margin-bottom: var(--space-lg);">Human Development Kit</h1>
     
@@ -67,7 +67,7 @@ if (signup === 'true') errorMessage = '// Sign up to access the full resources l
 
       <section style="background: var(--bg-surface); border: 1px solid var(--border); padding: var(--space-lg); margin-top: var(--space-lg);">
         {errorMessage && <p style="color: var(--accent); font-size: 0.875rem; margin-bottom: var(--space-md);">{errorMessage}</p>}
-        <p style="font-size: 0.875rem; margin-bottom: var(--space-md);">Free to download. One signup unlocks the HDK, The One Rule Framework, and everything in the Library.</p>
+        <p style="font-size: 0.875rem; margin-bottom: var(--space-md);">Free to download. One signup unlocks the HDK and The One Rule Framework.</p>
         <SignupForm label="" buttonText="Get Access" placeholder="your@email.com" />
       </section>
 
@@ -77,7 +77,7 @@ if (signup === 'true') errorMessage = '// Sign up to access the full resources l
         <h2 style="margin-bottom: var(--space-md);">The companion workbook</h2>
         <p style="margin-bottom: var(--space-md);">The HDK is complete on its own. The Field Kit is for those who want a structured place to do the work — not just read about it.</p>
         <p>The HDK Field Kit is the working companion to this framework. Seven worksheets for mapping your stack, tracking your changelog, clarifying your values, and building your minimum viable routine.</p>
-        <p style="margin-top: var(--space-md);">Pay what it's worth. Suggested $5. Minimum $1.</p>
+        <p style="margin-top: var(--space-md);">Pay what it's worth.</p>
         <p style="margin-top: var(--space-md);"><a href="https://damdugster.gumroad.com/l/HDKFieldKit" class="btn btn--accent" style="display: inline-block;">Get the Field Kit</a></p>
       </section>
     </div>
