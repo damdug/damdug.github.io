@@ -1,65 +1,37 @@
 ---
-interface Props {
-  label?: string;
-  placeholder?: string;
-  buttonText?: string;
-  redirect?: string;
-}
-const {
-  label = 'Get access to all resources — free.',
-  placeholder = 'your@email.com',
-  buttonText = 'Get Access',
-} = Astro.props;
 ---
-<div class="signup-form">
-  {label && <p class="label" style="margin-bottom: var(--space-sm);">{label}</p>}
-  <form class="form-row" id="signup-form">
-    <input
-      type="email"
-      name="email"
-      placeholder={placeholder}
-      required
-      class="form-input"
-    />
-    <button type="submit" class="btn btn--accent">{buttonText}</button>
-  </form>
-  <p id="signup-message" style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: var(--space-sm); display: none;"></p>
-</div>
 
-<script>
-  const form = document.getElementById('signup-form') as HTMLFormElement;
-  const message = document.getElementById('signup-message') as HTMLElement;
+<style>
+  .signup-form {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+  .signup-form input {
+    flex: 1;
+    min-width: 200px;
+  }
+</style>
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    try {
-      // Convert FormData to JSON to avoid CSRF protection
-      const email = formData.get('email');
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest',
-        },
-        body: JSON.stringify({ email }),
-      });
-      const data = await res.json();
-
-      message.style.display = 'block';
-      if (data.success) {
-        message.style.color = 'var(--text-primary)';
-        message.textContent = "You're in. Check your email.";
-        form.reset();
-      } else {
-        message.style.color = 'var(--accent)';
-        message.textContent = 'Something went wrong. Try again.';
-      }
-    } catch {
-      message.style.display = 'block';
-      message.style.color = 'var(--accent)';
-      message.textContent = 'Something went wrong. Try again.';
-    }
-  });
-</script>
+<form
+  action="https://formspree.io/f/xvzlbkqj"
+  method="POST"
+  class="signup-form"
+>
+  <input type="hidden"
+    name="_subject"
+    value="New signup — damdug.com" />
+  <input type="hidden"
+    name="_next"
+    value="https://www.damdug.com/confirm" />
+  <input
+    type="email"
+    name="email"
+    placeholder="your@email.com"
+    required
+    class="form-input"
+  />
+  <button type="submit" class="btn btn--accent">
+    Get Access
+  </button>
+</form>
