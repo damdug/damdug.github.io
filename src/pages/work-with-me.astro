@@ -1,43 +1,34 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Work With Me" description="Work with Douglas M. Galloway — a thinking partner for founders and executives building something real.">
+<BaseLayout title="Work With Me" description="A free 30-minute conversation about where you are and whether working together makes sense.">
   <article class="container section">
     <h1 style="margin-bottom: var(--space-xl);">Work With Me</h1>
 
     <div style="max-width: 65ch; display: flex; flex-direction: column; gap: var(--space-xl);">
-      <p>Good practices generally produce good outcomes. The reverse isn't true. That single inversion is the basis of everything I do — personally and professionally.</p>
+      <p>If you're building something real and running into the same ceiling — this is the conversation worth having.</p>
 
-      <p>Most people who reach out have already tried the obvious approaches. The problem isn't effort or motivation. It's that the system underneath isn't designed for their actual situation — not the ideal one, not the previous one. The one they're actually running right now.</p>
+      <p>I work with a small number of founders and operators on an ongoing basis. Strategy, systems, process, and AI — whatever the gap actually is.</p>
 
-      <p>That's the work. Whether it's a personal operating system that needs a rebuild, an organizational process that keeps breaking at the same point, or a decision logic that isn't producing reliable outcomes — it starts with an honest look at what's actually running.</p>
+      <p>Ready to work on it? Start with a free 30-minute call. We'll figure out the rest from there.</p>
 
-      <p>Both individual and organizational engagements start the same way. A conversation first. No proposal without one. If there's a fit, we build something together. If there isn't, you'll leave with a clearer picture of what you actually need.</p>
+      <a href="https://calendly.com/damdug/30min" target="_blank" rel="noopener noreferrer" class="btn btn--accent" style="display: inline-block; max-width: fit-content;">
+        Book a free 30-minute call →
+      </a>
 
-      <p>Tell me what you're working on.</p>
+      <hr />
 
-      <section style="margin-top: var(--space-lg);">
-        <form action="https://formspree.io/f/xnqegrgq" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg); max-width: 600px;">
-          <input type="hidden" name="_subject" value="New message — damdug.com" />
-          <input type="hidden" name="_next" value="https://www.damdug.com/confirm" />
-          <div>
-            <label for="name" class="label" style="display: block; margin-bottom: var(--space-xs);">Name</label>
-            <input type="text" id="name" name="name" required class="form-input" style="width: 100%;" />
-          </div>
+      <div>
+        <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">Working on something larger?</p>
+        <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-md);">Organizational systems, intelligence infrastructure, AI governance for your team — that's a different conversation.</p>
+        <a href="/contact" style="font-size: 0.875rem; color: var(--accent);">Get in touch directly →</a>
+      </div>
 
-          <div>
-            <label for="email" class="label" style="display: block; margin-bottom: var(--space-xs);">Email</label>
-            <input type="email" id="email" name="email" required class="form-input" style="width: 100%;" />
-          </div>
+      <hr />
 
-          <div>
-            <label for="message" class="label" style="display: block; margin-bottom: var(--space-xs);">Message</label>
-            <textarea id="message" name="message" required class="form-input" rows="6" placeholder="What are you working on?" style="width: 100%; resize: vertical; font-family: var(--font-mono);"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--accent">Start a Conversation</button>
-        </form>
-      </section>
+      <p style="font-size: 0.8125rem; color: var(--text-tertiary);">
+        Douglas M. Galloway is co-founder of <a href="https://www.esoteriaai.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-tertiary); text-decoration: underline;">esoteriaai.com</a> — intelligence infrastructure for mission-driven organizations across the US-Mexico corridor.
+      </p>
     </div>
   </article>
 </BaseLayout>

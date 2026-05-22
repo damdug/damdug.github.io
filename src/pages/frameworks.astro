@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SignupForm from '../components/SignupForm.astro';
+---
+<BaseLayout title="Frameworks" description="The One Rule and the HDK — two frameworks built from practice, made available because they're useful beyond my own context.">
+  <article class="container section">
+    <h1 style="margin-bottom: var(--space-lg);">Frameworks</h1>
+
+    <div style="max-width: 65ch; display: flex; flex-direction: column; gap: var(--space-xl);">
+      <p>Good ideas should circulate. The One Rule and the HDK are free. Leave your email — the frameworks are yours.</p>
+
+      <section style="background: var(--bg-surface); border: 1px solid var(--border); padding: var(--space-lg);">
+        <SignupForm />
+      </section>
+
+      <hr />
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-xl);">
+        <section>
+          <h2 style="font-size: 1.125rem; margin-bottom: var(--space-md);">The One Rule</h2>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">A governing principle for decisions, systems, and practice. The foundation everything else builds on.</p>
+          <a href="/one-rule" style="color: var(--accent);">Read the framework →</a>
+        </section>
+
+        <section>
+          <h2 style="font-size: 1.125rem; margin-bottom: var(--space-md);">Human Development Kit</h2>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">A structured approach to building your personal operating system. Process design applied to life — not as metaphor, but as method.</p>
+          <a href="/hdk" style="color: var(--accent);">Explore the HDK →</a>
+        </section>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
