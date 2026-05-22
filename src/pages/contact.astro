@@ -1,29 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Contact">
+<BaseLayout title="Get In Touch" description="For larger engagements, organizational work, and everything else.">
   <article class="container section">
-    <h1 style="margin-bottom: var(--space-lg);">Contact</h1>
-    
+    <h1 style="margin-bottom: var(--space-lg);">Get In Touch</h1>
+    <p style="margin-bottom: var(--space-xl); max-width: 65ch;">For organizational systems, larger engagements, and everything that doesn't fit a 30-minute call.</p>
+
     <div style="max-width: 600px;">
-      <p style="margin-bottom: var(--space-xl);">For inquiries not covered by the Work With Me page.</p>
-      
-      <form action="#" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg);">
+      <form action="https://formspree.io/f/xnqegrgq" method="POST" style="display: flex; flex-direction: column; gap: var(--space-lg);">
+        <input type="hidden" name="_subject" value="New Contact Inquiry — damdug.com" />
+        <input type="hidden" name="_next" value="/thank-you" />
         <div>
           <label for="name" class="label" style="display: block; margin-bottom: var(--space-xs);">Name</label>
           <input type="text" id="name" name="name" required class="form-input" style="width: 100%;" />
         </div>
-        
         <div>
           <label for="email" class="label" style="display: block; margin-bottom: var(--space-xs);">Email</label>
           <input type="email" id="email" name="email" required class="form-input" style="width: 100%;" />
         </div>
-        
         <div>
           <label for="message" class="label" style="display: block; margin-bottom: var(--space-xs);">Message</label>
           <textarea id="message" name="message" required class="form-input" rows="8" style="width: 100%; resize: vertical; font-family: var(--font-mono);"></textarea>
         </div>
-        
         <button type="submit" class="btn btn--accent">Send Message</button>
       </form>
     </div>

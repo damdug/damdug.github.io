@@ -1,52 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SignupForm from '../components/SignupForm.astro';
 ---
 
 <BaseLayout title="Home" description="Douglas M. Galloway — Systems thinker and builder. Frameworks developed from practice, made available because they're useful beyond my own context.">
 <style>
   footer { margin-top: 0 !important; }
 </style>
-    <section class="section">
-        <div class="container">
-            <p class="label" style="margin-bottom: var(--space-md);">DOUGLAS M. GALLOWAY</p>
-            <p style="margin-bottom: var(--space-md); color: var(--text-tertiary); font-size: 0.875rem;">For people building something real who keep running into the same ceiling.</p>
-            <h1 class="cursor">Systems over shortcuts.</h1>
-            <p style="margin-top: var(--space-lg); max-width: 60ch;">
-                I build systems — for organizations, for teams, for myself. The lens doesn't change with the scale.
-            </p>
-            <p style="margin-top: var(--space-md); color: var(--text-tertiary);">Process. Design. Execution. One approach.</p>
-
-            <div id="signup" style="margin-top: var(--space-xl); max-width: 600px;">
-                <p style="margin-bottom: var(--space-md); font-size: 0.875rem;">The frameworks behind the work. One signup unlocks everything.</p>
-                <SignupForm buttonText="Get Access" placeholder="your@email.com" label="" />
-            </div>
-        </div>
-    </section>
-
-    <section
-        class="section"
-        style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: var(--space-xl); margin-bottom: 0; padding-bottom: 0;"
-    >
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
-                <a href="/one-rule" class="card" style="display: block;">
-                    <h3 style="margin-bottom: var(--space-sm);">The One Rule</h3>
-                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">A governing principle for decisions, systems, and practice. The foundation everything else builds on.</p>
-                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Read →</p>
-                </a>
-                <a href="/hdk" class="card" style="display: block;">
-                    <h3 style="margin-bottom: var(--space-sm);">HDK</h3>
-                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">A framework for designing how you actually operate — not how you intend to. Built from practice. Yours to use.</p>
-                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Explore →</p>
-                </a>
-                <a href="/library" class="card" style="display: block;">
-                    <h3 style="margin-bottom: var(--space-sm);">Library</h3>
-                    <p style="font-size: 0.875rem; margin-bottom: var(--space-sm);">Frameworks and tools developed from practice. The One Rule. The HDK. More as the work develops. One signup.</p>
-                    <p style="font-size: 0.8125rem; color: var(--text-secondary); margin-top: var(--space-md);">Get access →</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
+  <section class="section">
+    <div class="container">
+      <p class="label" style="margin-bottom: var(--space-md);">DOUGLAS M. GALLOWAY</p>
+      <p style="margin-bottom: var(--space-md); color: var(--text-tertiary); font-size: 0.875rem;">For people building something real who keep running into the same ceiling.</p>
+      <h1 class="cursor">Systems over shortcuts.</h1>
+      <p style="margin-top: var(--space-lg); max-width: 60ch;">
+        I build systems — for organizations, for teams, for myself. The lens doesn't change with the scale.
+      </p>
+      <div style="margin-top: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-md); max-width: 480px;">
+        <a href="https://calendly.com/damdug/30min" target="_blank" rel="noopener noreferrer" class="btn btn--accent">
+          Ready to work on it? Start with a free 30-minute call →
+        </a>
+        <a href="/frameworks" style="font-size: 0.875rem; color: var(--text-tertiary);">Explore the frameworks →</a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
